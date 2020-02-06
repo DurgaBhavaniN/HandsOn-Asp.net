@@ -1,0 +1,36 @@
+﻿@model Emart.Model.Seller
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Search</title>
+</head>
+<body>
+    <h1>Seller</h1>
+    <table border="1">
+        <tr>
+            <td>    s_id   </td>
+            <td>    s_name   </td>
+            <td>    s_pwd   </td>
+            <td>    email_id   </td>
+            <td>    postal_address   </td>
+            <td>    gstin   </td>
+            <td>    bank_details   </td>
+        </tr>
+        <tr>
+            <td>@Model.s_id</td>
+            <td>@Model.s_name</td>
+            <td>@Model.s_pwd</td>
+            <td>@Model.s_emailid</td>
+            <td>@Model.postal_address</td>
+            <td>@Model.gstin</td>
+            <td>@Model.bank_details</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Emart.Model.Seller>
+@{
+    //Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>Sellers</h1>
+<table border="1">
+    <tr>
+        <td>    s_id   </td>
+        <td>    s_name   </td>
+        <td>    s_pwd   </td>
+        <td>    email_id   </td>
+        <td>    postal_address   </td>
+        <td>    gstin   </td>
+        <td>    bank_details   </td>
+    </tr>
+    @foreach(var slr in Model)
+    {
+<tr>
+    <td>@slr.s_id</td>
+    <td>@slr.s_name</td>
+    <td>@slr.s_pwd</td>
+    <td>@slr.s_emailid</td>
+    <td>@slr.postal_address</td>
+    <td>@slr.gstin</td>
+    <td>@slr.bank_details</td>
+</tr>
+    }
+    </table>

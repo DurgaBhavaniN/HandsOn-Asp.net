@@ -1,0 +1,54 @@
+﻿@model MvcUsingModelValidations.Models.User;
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+@using (Html.BeginForm())
+{
+<table class="table table-bordered">
+    <tr>
+        <td>@Html.DisplayNameFor(m=>m.Name)</td>
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+        <td>@Html.ValidationMessageFor(m=>m.Name)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m=>m.DOB)</td>
+        <td>@Html.TextBoxFor(m => m.DOB,null,new { @type = "Date" })</td>
+        <td>@Html.ValidationMessageFor(m=>m.DOB)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Email)</td>
+        <td>@Html.TextBoxFor(m => m.Email)</td>
+        <td>@Html.ValidationMessageFor(m => m.Email)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Phnno)</td>
+        <td>@Html.TextBoxFor(m => m.Phnno)</td>
+        <td> @Html.ValidationMessageFor(m => m.Phnno)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Country)</td>
+        <td>@Html.DropDownListFor(m => m.Country, ViewBag.Country as SelectList)</td>
+        <td> @Html.ValidationMessageFor(m => m.Country)</td>
+
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.UName)</td>
+        <td>@Html.TextBoxFor(m => m.UName)</td>
+        <td> @Html.ValidationMessageFor(m => m.UName)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Pwd)</td>
+        <td>@Html.Password("Pwd")</td>
+        <td> @Html.ValidationMessageFor(m => m.Pwd)</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Register" class="btn btn-primary" />
+        </td>
+    </tr>
+</table>
+}
+

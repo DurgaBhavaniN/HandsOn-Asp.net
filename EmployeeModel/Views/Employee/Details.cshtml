@@ -1,0 +1,12 @@
+﻿@model EmployeeModel.Models.Employee
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>
+    Welcome @Html.DisplayFor(m => m.Name)<br />
+
+</h1>
+Password: @Html.DisplayFor(m => m.Pwd)<br />hh
+@Html.ActionLink("LOGOUT", "Login", "Employee")
+

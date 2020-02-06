@@ -1,0 +1,51 @@
+﻿@model ModelValidations.Models.Employee
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+@using(Html.BeginForm())
+{
+<table class="table table-bordered">
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.ID)</td>
+        <td>@Html.TextBoxFor(m => m.ID)</td>
+        <td>@Html.ValidationMessageFor(m => m.ID)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Name)</td>
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+        <td>@Html.ValidationMessageFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Email)</td>
+        <td>@Html.TextBoxFor(m => m.Email)</td>
+        <td>@Html.ValidationMessageFor(m => m.Email)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Mobile)</td>
+        <td>@Html.TextBoxFor(m => m.Mobile)</td>
+        <td>@Html.ValidationMessageFor(m => m.Mobile)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Uname)</td>
+        <td>@Html.TextBoxFor(m => m.Uname)</td>
+        <td>@Html.ValidationMessageFor(m => m.Uname)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Pwd)</td>
+        <td>@Html.TextBoxFor(m => m.Pwd)</td>
+        <td>@Html.ValidationMessageFor(m => m.Pwd)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Cpwd)</td>
+        <td>@Html.TextBoxFor(m => m.Cpwd)</td>
+        <td>@Html.ValidationMessageFor(m => m.Cpwd)</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <input type="submit" value="Register" class="btn btn-primary" />
+        </td>
+    </tr>
+</table>
+}

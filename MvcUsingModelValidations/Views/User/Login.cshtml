@@ -1,0 +1,34 @@
+﻿@model MvcUsingModelValidations.Models.User
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+@using(Html.BeginForm())
+{
+    <table class="table table-bordered">
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.UName)</td>
+            <td>@Html.TextBox("uname")</td>
+            <td> @Html.ValidationMessageFor(m => m.UName)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.Pwd)</td>
+            <td>@Html.Password("pwd")</td>
+            <td> @Html.ValidationMessageFor(m => m.Pwd)</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Login" class="btn btn-primary"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="text-danger">@ViewData["err"]</span>
+
+            </td>
+        </tr>
+    </table>
+}
+
